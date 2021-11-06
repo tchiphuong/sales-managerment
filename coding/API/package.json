@@ -10,12 +10,14 @@
   "author": "tchiphuong",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.12",
+    "ansi-regex": ">=5.0.1"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "ansi-regex": ">=5.0.1"
   }
 }
