@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,29 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+#Admin begin
+Route::name('admin.')->group(function () {
+    Route::get('/login', function () {
+        return view('admin/login');
+    });
+
+    Route::get('/', function () {
+        return view('admin/dashboard');
+    });
+
+    Route::get('/categories', function () {
+        return view('admin/master/categories/categorySearch');
+    });
+
+    Route::get('/categories/add', function () {
+        return view('admin/master/categories/categoryAdd');
+    });
+});
+#Admin end
+
+
+#Users begin
+Route::get('/products', [ProductController::class, 'index']
+);
+#Users end
